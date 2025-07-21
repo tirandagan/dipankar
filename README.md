@@ -23,14 +23,14 @@ The app will be available at:
 ### Render Configuration
 
 1. Create a new Web Service on Render
-2. Connect your GitHub repository
+2. Connect your GitHub repository (tirandagan/dipankar)
 3. Use these settings:
    - **Environment**: Node
-   - **Build Command**: `npm install && cd client && npm install && npm run build`
+   - **Build Command**: `npm run render-build`
    - **Start Command**: `npm start`
    - **Environment Variables**:
      - `NODE_ENV`: production
-     - `PORT`: 10000 (Render will set this automatically)
+     - PORT will be set automatically by Render
 
 ### Important Notes for Render:
 
