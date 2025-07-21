@@ -1,7 +1,10 @@
 const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 
-const dbPath = path.join(__dirname, '../../database/app.db');
+// Use /tmp for Render deployment, local path for development
+const dbPath = process.env.NODE_ENV === 'production' 
+  ? '/tmp/app.db'
+  : path.join(__dirname, '../../database/app.db');
 
 const db = new sqlite3.Database(dbPath, (err) => {
   if (err) {
